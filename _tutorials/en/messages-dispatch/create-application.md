@@ -9,14 +9,14 @@ meta_description: A Messages and Dispatch application has a message status webho
 
 There are two alternative methods for creating a Messages and Dispatch application:
 
-1. Using the Nexmo CLI
+1. Using the Vonage CLI
 2. Using the Dashboard
 
 Each of these methods is described in the following sections.
 
-### How to create a Messages and Dispatch application using the Nexmo CLI
+### How to create a Messages and Dispatch application using the Vonage CLI
 
-To create your application using the Nexmo CLI, enter the following command into the shell:
+To create your application using the Vonage CLI, enter the following command into the shell:
 
 ``` shell
 nexmo app:create "My Messages App" --capabilities=messages --messages-inbound-url=https://example.com/webhooks/inbound-message --messages-status-url=https://example.com/webhooks/message-status --keyfile=private.key

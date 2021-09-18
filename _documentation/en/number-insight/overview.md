@@ -54,7 +54,7 @@ CNAM (add-on) | ❌ | ✅ | ✅
 
 ## Getting Started
 
-This example shows you how to use the [Nexmo CLI](/tools) to access the Number Insight Basic API and display information about a number.
+This example shows you how to use the [Vonage CLI](/tools) to access the Number Insight Basic API and display information about a number.
 
 > For examples of how to use Basic, Standard and Advanced Number Insight with `curl` and the developer SDKs see the [Code Snippets](#code-snippets).
 
@@ -63,15 +63,15 @@ This example shows you how to use the [Nexmo CLI](/tools) to access the Number I
 * Sign up for a [Vonage API account](https://dashboard.nexmo.com/signup)
 * Install [Node.JS](https://nodejs.org/en/download/)
 
-### Install and set up the Nexmo CLI
+### Install and set up the Vonage CLI
 
 ```
-$ npm install -g nexmo-cli
+$ npm install -g @vonage/cli
 ```
 
 > Note: Depending on your user permissions, you might need to prefix the above command with `sudo`.
 
-Use your `VONAGE_API_KEY` and `VONAGE_API_SECRET` from the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide) to set up the Nexmo CLI with your credentials:
+Use your `VONAGE_API_KEY` and `VONAGE_API_SECRET` from the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide) to set up the Vonage CLI with your credentials:
 
 ```
 $ nexmo setup VONAGE_API_KEY VONAGE_API_SECRET

@@ -5,7 +5,7 @@ navigation_weight: 1
 
 # Troubleshooting
 
-## Working with the Nexmo CLI
+## Working with the Vonage CLI
 
 ### Vonage Application setup
 

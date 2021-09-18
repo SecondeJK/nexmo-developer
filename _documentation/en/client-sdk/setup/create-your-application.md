@@ -15,7 +15,7 @@ In order to use the Client SDK, there are three things you need to set up before
 * [JSON Web Tokens, JWTs](https://jwt.io/) - Client SDK uses JWTs for authentication. In order for a user to log in and use the SDK functionality, you need to provide a JWT per user. JWTs contain all the information the Vonage platform needs to authenticate requests, as well as information such as the associated Applications, Users and permissions.
 
 All of these may be [created by your backend](/conversation/overview). 
-If you wish to get started and experience using the SDK without any implementation of your backend, this tutorial will show you how to do so, using the [Nexmo CLI](https://github.com/Nexmo/nexmo-cli).
+If you wish to get started and experience using the SDK without any implementation of your backend, this tutorial will show you how to do so, using the [Vonage CLI](https://github.com/vonage/vonage-cli).
 
 ## Prerequisites
 
@@ -23,15 +23,15 @@ Make sure you have the following:
 
 * A Vonage account - [sign up](https://dashboard.nexmo.com)
 * [Node.JS](https://nodejs.org/en/download/) and NPM installed
-* Install the Nexmo CLI.
+* Install the Vonage CLI.
 
-To install the Nexmo CLI, run the following command in a terminal:
+To install the Vonage CLI, run the following command in a terminal:
 
 ```bash
-npm install -g nexmo-cli@beta
+npm install -g @vonage/cli@beta
 ```
 
-Set up the Nexmo CLI to use your Vonage API Key and API Secret. You can get these from the [settings page](https://dashboard.nexmo.com/settings) in the Vonage Dashboard.
+Set up the Vonage CLI to use your Vonage API Key and API Secret. You can get these from the [settings page](https://dashboard.nexmo.com/settings) in the Vonage Dashboard.
 
 Run the following command in a terminal, while replacing `API_KEY` and `API_SECRET` with your Vonage API key and secret:
 

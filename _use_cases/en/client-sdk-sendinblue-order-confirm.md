@@ -30,15 +30,15 @@ The scenario is as follows:
 
 The following procedure assumes you have the `git` and `npm` commands available on the command line.
 
-**1.** Install the Nexmo CLI:
+**1.** Install the Vonage CLI:
 
 ``` bash
-npm install nexmo-cli@beta -g
+npm install @vonage/cli -g
 ```
 
-> **NOTE:** The Beta version of the Nexmo CLI is required for this demo.
+> **NOTE:** The Beta version of the Vonage CLI is required for this demo.
 
-**2.** Initialize your credentials for use with the Nexmo CLI:
+**2.** Initialize your credentials for use with the Vonage CLI:
 
 ``` bash
 nexmo setup NEXMO_API_KEY NEXMO_API_SECRET

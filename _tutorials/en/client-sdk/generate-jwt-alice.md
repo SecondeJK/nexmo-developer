@@ -9,7 +9,7 @@ The Client SDK uses [JWTs](/concepts/guides/authentication#json-web-tokens-jwt) 
 
 > **NOTE**: We'll be creating a one-time use JWT on this page for testing. In production apps, your server should expose an endpoint that generates a JWT for each client request.
 
-You are generating a JWT using the Nexmo CLI by running the following command but remember to replace the `APP_ID` variable with your own value:
+You are generating a JWT using the Vonage CLI by running the following command but remember to replace the `APP_ID` variable with your own value:
 
 ``` shell
 nexmo jwt:generate ./private.key exp=$(($(date +%s)+21600)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' sub=Alice application_id=APP_ID

@@ -92,6 +92,6 @@ product: conversation
 ## References
 
 * [Conversation API](/conversation/overview)
-* [Nexmo CLI](https://github.com/nexmo/nexmo-cli/tree/beta)
+* [Vonage CLI](https://github.com/vonage/vonage-cli/tree/beta)
 * [Tutorials](/client-sdk/tutorials)
 * [Use Cases](/client-sdk/use-cases)

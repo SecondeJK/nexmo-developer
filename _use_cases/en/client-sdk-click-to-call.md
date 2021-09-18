@@ -21,7 +21,7 @@ All the code is [available on GitHub](https://github.com/nexmo-community/client-
 In order to work through this use case you need:
 
 * A [Vonage account](https://dashboard.nexmo.com/sign-up)
-* The [Nexmo CLI](https://github.com/nexmo/nexmo-cli) installed and configured.
+* The [Vonage CLI](https://github.com/vonage/vonage-cli) installed and configured.
 * A publicly accessible web server so Vonage can make webhook requests to your app. If you're developing locally we recommend [ngrok](https://ngrok.com/).
 
 ## Get Started
@@ -37,15 +37,15 @@ git clone https://github.com/nexmo-community/client-sdk-click-to-call
 cd client-sdk-click-to-call
 ```
 
-### Install the Nexmo CLI
+### Install the Vonage CLI
 
-You can perform some of these initial steps by using the [Developer Dashboard](https://dashboard.nexmo.com). However, it's often easier to use the Nexmo CLI and as we'll need it for some later steps, install the Nexmo CLI beta before continuing:
+You can perform some of these initial steps by using the [Developer Dashboard](https://dashboard.nexmo.com). However, it's often easier to use the Vonage CLI and as we'll need it for some later steps, install the Vonage CLI beta before continuing:
 
 ```sh
-npm install nexmo-cli@beta 
+npm install @vonage/cli 
 ```
 
-Then, configure the Nexmo CLI with your API key and secret:
+Then, configure the Vonage CLI with your API key and secret:
 
 ```sh
 nexmo setup API_KEY API_SECRET
@@ -67,7 +67,7 @@ Let's not get confused between the application itself that contains the logic an
 
 A Vonage Application is a container for security and configuration information. When you create a Vonage application, you specify some [webhook](https://developer.nexmo.com/concepts/guides/webhooks) endpoints; these are the URLs that your code exposes which must be publicly accessible. When a caller calls your Vonage number, Vonage makes an HTTP request to the `answer_url` endpoint you specify and follows the instructions it finds there. If you provide an `event_url` endpoint, Vonage will update your application about call events which can help you troubleshoot any problems.
 
-To create the Vonage Application, use the Nexmo CLI to run the command below, replacing `YOUR_SERVER_HOSTNAME` in both URLs with your own server's host name:
+To create the Vonage Application, use the Vonage CLI to run the command below, replacing `YOUR_SERVER_HOSTNAME` in both URLs with your own server's host name:
 
 ```bash
 nexmo app:create --keyfile private.key ClickToCall https://YOUR_SERVER_HOSTNAME/webhooks/answer https://YOUR_SERVER_NAME/webhooks/event

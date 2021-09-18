@@ -7,14 +7,14 @@ meta_description: A Voice application has an answer webhook and an events webhoo
 
 There are two methods for creating a Voice application:
 
-1. Using the Nexmo CLI
+1. Using the Vonage CLI
 2. Using the Dashboard
 
 Each of these methods is described in the following sections.
 
-## How to create a Voice application using the Nexmo CLI
+## How to create a Voice application using the Vonage CLI
 
-To create your application using the Nexmo CLI, enter the following command into the shell replacing `NGROK_HOST_NAME` with the ngrok host that you got when you set up ngrok:
+To create your application using the Vonage CLI, enter the following command into the shell replacing `NGROK_HOST_NAME` with the ngrok host that you got when you set up ngrok:
 
 ``` shell
 nexmo app:create "AspNetTestApp" http://NGROK_HOST_NAME/webhooks/answer http://NGROK_HOST_NAME/webhooks/events

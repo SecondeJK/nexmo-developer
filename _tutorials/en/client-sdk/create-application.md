@@ -39,7 +39,7 @@ capabilities your application needs. For the purposes of this example select bot
 
 **8.** You are next prompted for the "Voice Fallback Answer URL". This is an optional fallback URL should your main 
 Voice 
-Answer URL fail for some reason. In this case press Enter. If later you need the fallback URL you can add it in the [Dashboard](https://dashboard.nexmo.com/sign-in), or using the Nexmo CLI.
+Answer URL fail for some reason. In this case press Enter. If later you need the fallback URL you can add it in the [Dashboard](https://dashboard.nexmo.com/sign-in), or using the Vonage CLI.
 
 **9.** You are now required to enter the "Voice Event URL". Enter `https://example.ngrok.io/webhooks/event`.
 

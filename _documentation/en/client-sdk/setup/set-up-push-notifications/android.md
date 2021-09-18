@@ -80,7 +80,7 @@ To connect Vonage backend push service with Firebase you will need the following
 
 ### Get Vonage application Id
 
-Obtain your Vonage API Application id. You can access the existing applications in the [dashboard](https://dashboard.nexmo.com/voice/your-applications). If you don't have an application already you can create the new application via [Nexmo CLI](/client-sdk/setup/create-your-application).
+Obtain your Vonage API Application id. You can access the existing applications in the [dashboard](https://dashboard.nexmo.com/voice/your-applications). If you don't have an application already you can create the new application via [Vonage CLI](/client-sdk/setup/create-your-application).
 
 ### Get Firebase project Id
 

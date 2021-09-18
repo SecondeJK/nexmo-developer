@@ -17,4 +17,4 @@ msisdn      | country | cost | type       | features
 31655553007 | NL      | 3.00 | mobile-lvn | VOICE,SMS
 ```
 
-See the [Nexmo CLI](https://github.com/nexmo/nexmo-cli) documentation for details on arguments.
+See the [Vonage CLI](https://github.com/vonage/vonage-cli) documentation for details on arguments.
