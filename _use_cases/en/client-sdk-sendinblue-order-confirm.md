@@ -82,7 +82,7 @@ e. Choose Y/N for "Using your data to improve AI"
 
 The application is then created.
 
-The file `vonage_app.json` is created in the project directory containing the Application ID, anem and the private key.
+The file `vonage_app.json` is created in the project directory containing the Application ID, name and the private key.
 
 **8.** Open the `.env` file in your project directory with an editor.
 

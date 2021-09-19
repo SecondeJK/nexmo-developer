@@ -39,7 +39,7 @@ To list your current applications use:
 vonage apps
 ```
 
-This displays a list showing the application ID, name and capabilites.
+This displays a list showing the application ID, name and capabilities.
 
 ## Show application details
 

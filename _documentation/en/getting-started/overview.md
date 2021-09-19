@@ -40,7 +40,7 @@ Once you have an account, you can log into the [Developer Dashboard](/account/gu
 
 You can optionally perform many of the Dashboard tasks from the command line, using the Vonage CLI. This is often quicker and also allows you to script these operations.
 
-The Vonage CLI is written with oclif and can be installed using the Node Package Manager (`npm`). The `README` in the [Vonage CLI GitHub repo](https://github.com/Vonage/vonage-cli) shows you how to install and work with the Vonage CLI.
+The Vonage CLI is written with `oclif` and can be installed using the Node Package Manager (`npm`). The `README` in the [Vonage CLI GitHub repo](https://github.com/Vonage/vonage-cli) shows you how to install and work with the Vonage CLI.
 
 ## Authentication
 
