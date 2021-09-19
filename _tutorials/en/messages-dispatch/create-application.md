@@ -19,10 +19,10 @@ Each of these methods is described in the following sections.
 To create your application using the Vonage CLI, enter the following command into the shell:
 
 ``` shell
-nexmo app:create "My Messages App" --capabilities=messages --messages-inbound-url=https://example.com/webhooks/inbound-message --messages-status-url=https://example.com/webhooks/message-status --keyfile=private.key
+vonage apps:create "My Messages App" messages_inbound_url=https://example.com/webhooks/inbound-message messages_status_url=https://example.com/webhooks/message-status 
 ```
 
-This creates a Vonage application with a messages [capability](/application/overview#capabilities), with the webhook URLs configured as specified, and generate a private key file `private.key`.
+This creates a Vonage application with a messages [capability](/application/overview#capabilities), with the webhook URLs configured as specified, and generate a private key file `my_messages_app.key` and creates/updates `vonage_app.json`.
 
 ### How to create a Messages and Dispatch application using the Dashboard
 

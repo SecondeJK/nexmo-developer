@@ -94,7 +94,7 @@ composer install
 
 Copy the `config.php.dist` to `config.php` and edit it to add your base URL (the same URL that you used when setting up the application above).
 
-> If you're using ngrok, it randomly generates a tunnel URL. It can be helpful to start ngrok before doing the other configuration so that you know what URL your endpoints will be on (paid ngrok users can reserve tunnel names). It might also be useful to know that there is a `nexmo app:update` command if you need update the URLs you set at any time
+> If you're using ngrok, it randomly generates a tunnel URL. It can be helpful to start ngrok before doing the other configuration so that you know what URL your endpoints will be on (paid ngrok users can reserve tunnel names). It might also be useful to know that there is a `vonage apps:update` command if you need update the URLs you set at any time
 
 All set? Then start up the PHP webserver:
 

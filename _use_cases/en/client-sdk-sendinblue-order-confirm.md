@@ -64,27 +64,25 @@ This installs required modules based on the `package.json` file.
 
 **6.** Copy `example.env` to `.env` in the project directory. You will edit `.env` in a later step to specify your credentials and other configuration information.
 
-**7.** Create a Vonage application [interactively](/application/nexmo-cli#interactive-mode). The following command enters interactive mode:
+**7.** Create a Vonage application [interactively](/application/vonage-cli#interactive-mode). The following command enters interactive mode:
 
 ``` bash
-nexmo app:create
+vonage apps:create
 ```
 
 a. Specify your application name. Press Enter to continue.
 
 b. Specify RTC capabilities with the arrow keys and press spacebar to select. Press Enter to continue.
 
-c. For "Use the default HTTP methods?" press Enter to select the default.
+c. For "Create RTC webhook?" press Y to create.
 
-d. For " RTC Event URL" enter `https://example.ngrok.io/webhooks/rtc` or other suitable URL (depends on how you are testing).
+d. For "Event Webhook" enter `https://example.ngrok.io/webhooks/rtc` or other suitable URL (depends on how you are testing) and use the default HTTP method.
 
-e. For "Public Key path" press Enter to select the default.
-
-f. For "Private Key path" enter `private.key` and press Enter.
+e. Choose Y/N for "Using your data to improve AI"
 
 The application is then created.
 
-The file `.nexmo-app` is created in the project directory containing the Application ID and the private key.
+The file `vonage_app.json` is created in the project directory containing the Application ID, anem and the private key.
 
 **8.** Open the `.env` file in your project directory with an editor.
 

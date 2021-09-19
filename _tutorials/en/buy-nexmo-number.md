@@ -16,7 +16,7 @@ If you have no spare numbers you can [buy one](https://dashboard.nexmo.com/buy-n
 You can purchase a number using the Vonage CLI. The following command purchases an available number in the US. Specify [an alternate two-character country code](https://www.iban.com/country-codes) to purchase a number in another country.
 
 ```bash
-$ nexmo number:buy --country_code US --confirm
+$ vonage numbers:search US
+$ vonage numbers:buy 15555555555 US
 ```
 
-Make a note of the number returned, as you'll need it later.

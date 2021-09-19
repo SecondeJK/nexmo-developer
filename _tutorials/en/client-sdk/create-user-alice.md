@@ -10,11 +10,11 @@ description: In this step you learn how to create a Client SDK User.
 To create a user named `Alice`, run the following command using the Vonage CLI:
 
 ```bash
-nexmo user:create name="Alice"
+vonage apps:users:create "Alice"
 ```
 
 This will return a user ID similar to the following:
 
 ```bash
-User created: USR-aaaaaaaa-bbbb-cccc-dddd-0123456789ab
+User ID: USR-aaaaaaaa-bbbb-cccc-dddd-0123456789ab
 ```

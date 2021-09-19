@@ -1,6 +1,6 @@
 ## Install latest version of Vonage Command Line Interface (CLI)
 
-The [Vonage CLI](https://developer.nexmo.com/application/nexmo-cli) allows you to carry out many operations on the command line. Examples include creating applications, purchasing numbers, and linking a number to an application.
+The [Vonage CLI](https://developer.nexmo.com/application/vonage-cli) allows you to carry out many operations on the command line. Examples include creating applications, purchasing numbers, and linking a number to an application.
 
 ```bash
 npm install -g @vonage/cli

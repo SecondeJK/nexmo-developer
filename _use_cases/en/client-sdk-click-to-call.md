@@ -70,7 +70,7 @@ A Vonage Application is a container for security and configuration information. 
 To create the Vonage Application, use the Vonage CLI to run the command below, replacing `YOUR_SERVER_HOSTNAME` in both URLs with your own server's host name:
 
 ```bash
-nexmo app:create --keyfile private.key ClickToCall https://YOUR_SERVER_HOSTNAME/webhooks/answer https://YOUR_SERVER_NAME/webhooks/event
+vonage apps:create ClickToCall --vonage_answer_url=https://YOUR_SERVER_HOSTNAME/webhooks/answer --vonage_event_url=https://YOUR_SERVER_NAME/webhooks/event
 ```
 
 This command returns a unique Application ID. Copy it somewhere, you will need it later!
@@ -78,16 +78,15 @@ This command returns a unique Application ID. Copy it somewhere, you will need i
 The parameters are:
 
 * `ClickToCall` - the name of your Vonage Application
-* `private.key` - the name of the file to store the private key in for authentication. This is downloaded to your application's root directory.
-* `https://example.com/webhooks/answer` - when you receive an inbound call to your Vonage number, Vonage makes a `GET` request and retrieves the [NCCO](/voice/voice-api/ncco-reference) that tells Vonage's APIs what to do with the call
-* `https://example.com/webhooks/event` - When the call status changes, Vonage sends status updates to this webhook endpoint
+* `-vonage_answer_url=https://example.com/webhooks/answer` - when you receive an inbound call to your Vonage number, Vonage makes a `GET` request and retrieves the [NCCO](/voice/voice-api/ncco-reference) that tells Vonage's APIs what to do with the call
+* `--vonage_event_url=https://example.com/webhooks/event` - When the call status changes, Vonage sends status updates to this webhook endpoint
 
 ## Link your Vonage number
 
 You need to tell Vonage which virtual number this Application uses. Execute the following CLI command, replacing `NEXMO_NUMBER` and `APPLICATION_ID` with your own values:
 
 ```
-nexmo link:app NEXMO_NUMBER APPLICATION_ID
+vonage apps:link APP_ID --number=VONAGE_NUMBER
 ```
 
 ## Create a User
@@ -95,7 +94,7 @@ nexmo link:app NEXMO_NUMBER APPLICATION_ID
 You need to authenticate your user using the Client SDK before they can call your Vonage number. Create a user called `supportuser` with the following CLI command, which returns a unique ID for the user. You don't need to track that ID in this example, so you can safely ignore the output of this command:
 
 ```
-nexmo user:create name="supportuser"
+vonage apps:users:create supportuser
 ```
 
 ## Generate a JWT
@@ -103,7 +102,7 @@ nexmo user:create name="supportuser"
 The Client SDK uses [JWTs](/concepts/guides/authentication#json-web-tokens-jwt) for authentication. Execute the following command to create the JWT, replacing `APPLICATION_ID` with your own Vonage Application ID. The JWT expires after one day (the maximum lifetime of a Vonage JWT), after which you will need to regenerate it.
 
 ```
-nexmo jwt:generate ./private.key sub=supportuser exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' application_id=APPLICATION_ID
+vonage jwt --key_file=./private.key --subject=supportuser --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --app_id=APPLICATION_ID
 ```
 
 ## Configure your Application

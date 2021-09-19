@@ -12,7 +12,7 @@ The Client SDK uses [JWTs](/concepts/guides/authentication#json-web-tokens-jwt) 
 You are generating a JWT using the Vonage CLI by running the following command but remember to replace the `APP_ID` variable with your own value:
 
 ``` shell
-nexmo jwt:generate ./private.key exp=$(($(date +%s)+21600)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' sub=Alice application_id=APP_ID
+vonage jwt --key_file=./private.key --acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{},"/*/legs/**":{}}}' --subject=Alice --app_id=APP_ID
 ```
 
 The generated JWT will be valid for the next 6 hours.
