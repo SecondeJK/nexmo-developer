@@ -48,17 +48,18 @@ npm install @vonage/cli
 Then, configure the Vonage CLI with your API key and secret:
 
 ```sh
-nexmo setup API_KEY API_SECRET
+vonage config:set --apiKey=API_KEY --apiSecret=API_SECRET
 ```
 ### Buy a Vonage number
 
 You'll need a Vonage virtual number for your customer to call. You can purchase an available number for your chosen country code using the following CLI command:
 
 ```
-nexmo number:buy -c GB --confirm
+vonage numbers:search US
+vonage numbers:buy US --number=15555555555
 ```
 
-Replace `GB` with your own [country code](https://www.iban.com/country-codes).
+Replace `US` with your own [country code](https://www.iban.com/country-codes).
 
 
 ## Create an Application
@@ -83,7 +84,7 @@ The parameters are:
 
 ## Link your Vonage number
 
-You need to tell Vonage which virtual number this Application uses. Execute the following CLI command, replacing `NEXMO_NUMBER` and `APPLICATION_ID` with your own values:
+You need to tell Vonage which virtual number this Application uses. Execute the following CLI command, replacing `VONAGE_NUMBER` and `APPLICATION_ID` with your own values:
 
 ```
 vonage apps:link APP_ID --number=VONAGE_NUMBER

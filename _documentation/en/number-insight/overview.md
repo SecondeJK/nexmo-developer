@@ -74,7 +74,7 @@ $ npm install -g @vonage/cli
 Use your `VONAGE_API_KEY` and `VONAGE_API_SECRET` from the [dashboard getting started page](https://dashboard.nexmo.com/getting-started-guide) to set up the Vonage CLI with your credentials:
 
 ```
-$ nexmo setup VONAGE_API_KEY VONAGE_API_SECRET
+$ vinage config:set --apiKey=VONAGE_API_KEY --apiSecret=VONAGE_API_SECRET
 ```
 
 ### Execute a Number Insight API Basic lookup
@@ -82,50 +82,25 @@ $ nexmo setup VONAGE_API_KEY VONAGE_API_SECRET
 Execute the example command shown below, replacing the phone number with one that you want information about:
 
 ```
-nexmo insight:basic 447700900000
+vonage numberinsight 15555555555
 ```
 
 ### View the response
 
-The Basic API response lists the number together with the country the number is located in. For example:
-
-```
-447700900000 | GB
-```
-Use the `--verbose` flag (or `-v`) to see everything that the Basic API response contains:
 
 ```text
-$ nexmo insight:basic --verbose 447700900000
+$ vonage numberinsight 15555555555
 
-[status]
-0
+Number Formats
+National: (555) 555-5555
+International: 15745144119
 
-[status_message]
-Success
-
-[request_id]
-aaaaaaaa-bbbb-cccc-dddd-0123456789ab
-
-[international_format_number]
-447700900000
-
-[national_format_number]
-07700 900000
-
-[country_code]
-GB
-
-[country_code_iso3]
-GBR
-
-[country_name]
-United Kingdom
-
-[country_prefix]
-44
+Country Details
+Country: United States of America
+Country Code: US
+ISO 3 Code: USA
+Prefix: 1
 ```
-
-
 
 
 ## Guides

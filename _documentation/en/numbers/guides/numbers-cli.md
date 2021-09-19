@@ -31,7 +31,7 @@ $ vonage numbers
 
 ## Search for new numbers
 
-Use the `nexmo number:search` command to list numbers available for purchase.
+Use the `vonage numbers:search` command to list numbers available for purchase.
 
 ```shell
 $ vonage numbers:search US

@@ -88,14 +88,14 @@ rails server
 Before the app can receive an SMS a Vonage phone number has to be rented. Phone numbers can be purchased from the [dashboard](https://dashboard.nexmo.com) or directly from the command line with the [Vonage CLI](https://github.com/vonage/vonage-cli).
 
 ```sh
-> nexmo number:buy --country_code US --confirm
-Number purchased: 447700900000
+> vonage numbers:buy US --number=15555555555
+Number 15555555555 purchased.
 ```
 
 Finally, Vonage must be informed of the webhook endpoint to make an HTTP request to when an inbound SMS is received. This can be done using the [dashboard](https://dashboard.nexmo.com/your-numbers) or the [Vonage CLI](https://github.com/vonage/vonage-cli).
 
 ```sh
-> nexmo link:sms 447700900000 http://[your.domain.com]/support
+> vonage number:sms 15555555555 http://[your.domain.com]/support
 Number updated
 ```
 

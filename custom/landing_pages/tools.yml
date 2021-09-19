@@ -115,7 +115,7 @@ page:
       - type: github_repo
         github_repo:
           repo_url: https://github.com/vonage/vonage-cli
-          badge_url: //badge.fury.io/js/nexmo-cli.svg
+          badge_url: //badge.fury.io/js/@vonage%2Fcli.svg
           github_repo_title: Vonage CLI (Command Line Interface)
           language: "JavaScript"
     - column:
